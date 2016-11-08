@@ -16,7 +16,9 @@ Of course, we need to account for the database storage cost
 - Setup database and table in postgres as follows:
   - `CREATE DATABASE fuse;`
   - `CREATE TABLE hashes(hash VARCHAR(64) PRIMARY KEY, block CHAR(4096));`
+- Run `python fs.py rootdir/ mountdir/` to mount the file system in mountdir
 
+Creating any file in mountdir will result in a compressed file being created in rootdir
 
 ### Important Note:
 Care has to be taken that reads and writes are all done in multiples of 4096
